@@ -32,5 +32,10 @@ We may want to store results in a view. But what is a view? It is a saved SQL qu
 The underlying query is re-ran each time the view is queried. Why do we need to use a view? Sometimes we want a selected  
 few to have access to our views, and thus authorized views allow control over which CURRENT_USER() sees what rows in the table.
 There is a big difference between a permanent table and a logical view, which is that a view lacks the *Preview* feature where you  
-can see an overview of your table columns and data values.
+can see an overview of your table columns and data values.  
+
+Let's discuss two use cases involving logical views: 
+   1. Say there are two teams (marketing and analytics) that will access your Google Cloud Platform project, and you want to give the marketing team access to fewer records of a particular dataset. Through views, you can filter out users, based on their log-in information (e.g. email), with the use of SESSION_USER().
+   2. Maybe your underlying data source is constantly changing, and you have to query that dataset frequently and regularly without re-running your query to create a permanent table. With views, you can avoid that and you get updated results at the moment you query your view.
+
 
