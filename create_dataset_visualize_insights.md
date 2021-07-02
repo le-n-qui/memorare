@@ -22,3 +22,8 @@ your table a name and click *Create table*.
 * If we specify a destination table then that table becomes permanent; otherwise, it's a new temporary table.
 * Temporary tables are the basis of query cached results.
 * Temporary tables last 24 hours only.
+## Query Cache
+Cache is **not used** when:
+   * Underlying table(s) updated
+   * Deterministic queries used, e.g. CURRENT_TIMESTAMP()
+   * Cache can be disabled in *Show Options*
