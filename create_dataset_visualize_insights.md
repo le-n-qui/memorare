@@ -17,3 +17,8 @@ at the top of the page. Click on the drop down menu to choose a method to create
 We will use *Upload*. Then we see the page wants to know what file format we will use and  
 so we choose JSON. Finally, we browse for our file under *Select file*. Once that's done, give  
 your table a name and click *Create table*.
+## Temporary Tables and Query Results
+* All query results are saved to either a temporary or permanent table.
+* If we specify a destination table then that table becomes permanent; otherwise, it's a new temporary table.
+* Temporary tables are the basis of query cached results.
+* Temporary tables last 24 hours only.
