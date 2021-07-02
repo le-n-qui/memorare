@@ -27,3 +27,10 @@ Cache is **not used** when:
    * Underlying table(s) updated
    * Deterministic queries used, e.g. CURRENT_TIMESTAMP()
    * Cache can be disabled in *Show Options*
+## Creating Logical Views
+We may want to store results in a view. But what is a view? It is a saved SQL query, or think of it as a virtual table.  
+The underlying query is re-ran each time the view is queried. Why do we need to use a view? Sometimes we want a selected  
+few to have access to our views, and thus authorized views allow control over which CURRENT_USER() sees what rows in the table.
+There is a big difference between a permanent table and a logical view, which is that a view lacks the *Preview* feature where you  
+can see an overview of your table columns and data values.
+
