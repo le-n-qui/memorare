@@ -1,2 +1,9 @@
 # Ingesting New Data into BigQuery
 ## Loading Data into BigQuery
+  1. Create a permanent table and ingest data from Google Cloud Storage (e.g. CSV file)
+  2. Create a permanent table, ingest data from GCS, and indicate *External table* on **Table type** (External Data Connection)
+      * We are creating something like a pointer because data is not actually being stored inside BigQuery
+      * We cannot preview the table (Method 1 allows us to preview). A configuration of data location is stored in BigQuery
+      * We will query directly from the data source on GCS
+      * We will lose performance benefits of BigQuery because we are not able to cache the data (Cannot cache data that is not natively stored in BigQuery)
+  3. 
