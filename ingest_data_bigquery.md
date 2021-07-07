@@ -10,3 +10,6 @@
   3. Create a permanent table, ingest data from Google Sheets, and **Table type** automatically says *External table*
       * It may take longer because it has to run through Google Drive API to reach out and get the data
   4. Create a permanent table, ingest data locally, and **Table type** automatically says *Native table*
+## Notes
+  * When we create a new table for our dataset via external data source, there will not be a load job in *Job history* because no data is ingested.
+  * If we specify a relative project pathname, such as *ecommerce.products* instead of *project_id.ecommerce.products*, BigQuery will assume the current project.
