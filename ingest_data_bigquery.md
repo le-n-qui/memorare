@@ -5,7 +5,7 @@
       * We are creating something like a pointer because data is not actually being stored inside BigQuery
       * We cannot preview the table (Method 1 allows us to preview). A configuration of data location is stored in BigQuery
       * We will query directly from the data source on GCS
-      * We will lose performance benefits of BigQuery because we are not able to cache the data (Cannot cache data that is not natively stored in BigQuery)
+      * We will lose performance benefits of BigQuery because we are not able to cache the data (Cannot cache data that is not natively stored in BigQuery). Also, without having BigQuery manage data storage, we do not have auto-optimization of our query execution path and certain wildcard functions are disabled. More importantly, data consistency is not guaranteed if the data values in the source are changed while querying.
       * Use case: Need a one-tine extract transform load (ETL) process (We connect to the external data source directly, perform preprocessing in SQL, and then ultimately store the result)
   3. Create a permanent table, ingest data from Google Sheets, and **Table type** automatically says *External table*
       * It may take longer because it has to run through Google Drive API to reach out and get the data
